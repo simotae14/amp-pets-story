@@ -133,12 +133,18 @@
 </head>
 
 <body>
-  <amp-story standalone
-    title="Joy of Pets"
-    publisher="Startae"
-    publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
-    poster-portrait-src="assets/cover.jpg"
-  >
+  <amp-story standalone title="Joy of Pets" publisher="Startae" publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
+    poster-portrait-src="assets/cover.jpg">
+    <amp-story-page id="cover">
+      <amp-story-grid-layer template="fill">
+        <amp-img src="assets/cover.jpg" width="720" height="1280" layout="responsive">
+        </amp-img>
+      </amp-story-grid-layer>
+      <amp-story-grid-layer template="vertical">
+        <h1>The Joy of Pets</h1>
+        <p>By AMP Tutorials</p>
+      </amp-story-grid-layer>
+    </amp-story-page>
   </amp-story>
 </body>
 
