@@ -132,11 +132,26 @@
   <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
   <!-- amp-video script -->
   <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+  <!-- amp-story-auto-ads script -->
+  <script async custom-element="amp-story-auto-ads" src="https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js">
+  </script>
+  <!-- amp-ad script -->
+  <script custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js" async></script>
 </head>
 
 <body>
   <amp-story standalone title="Joy of Pets" publisher="Startae" publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
     poster-portrait-src="assets/cover.jpg">
+    <amp-story-auto-ads id="adv">
+      <script type="application/json">
+        {
+          "ad-attributes": {
+            "type": "doubleclick",
+            "data-slot": "/30497360/a4a/amp_story_dfp_example"
+          }
+        }
+      </script>
+    </amp-story-auto-ads>
     <amp-story-page id="cover">
       <amp-story-grid-layer template="fill">
         <amp-img src="assets/cover.jpg" width="720" height="1280" layout="responsive">
@@ -170,6 +185,19 @@
           scientists assert that all dogs, domestic and wild, share a common ancestor in the small South Asian wolf.</p>
       </amp-story-grid-layer>
     </amp-story-page>
+    <amp-story-page id="birds2" background-audio="assets/bird-singing.mp3">
+      <amp-story-grid-layer template="fill">
+        <amp-img src="assets/bird.jpg" width="720" height="1280" layout="responsive">
+        </amp-img>
+      </amp-story-grid-layer>
+      <amp-story-grid-layer template="vertical">
+        <h1>Birds</h1>
+      </amp-story-grid-layer>
+      <amp-story-grid-layer class="bottom" template="vertical">
+        <q>A bird is three things: Feathers, flight and song, And feathers are the least of these.--Marjorie Allen
+          Seiffert</q>
+      </amp-story-grid-layer>
+    </amp-story-page>
     <amp-story-page id="birds" background-audio="assets/bird-singing.mp3">
       <amp-story-grid-layer template="fill">
         <amp-img src="assets/bird.jpg" width="720" height="1280" layout="responsive">
@@ -184,22 +212,26 @@
       </amp-story-grid-layer>
     </amp-story-page>
     <amp-story-page id="page6">
-        <amp-story-grid-layer template="vertical" class="noedge">
-          <div class="wrapper">
-            <amp-img animate-in="fade-in" animate-in-delay="0.4s" src="assets/cat.jpg" width="720" height="1280" layout="responsive">
-            </amp-img>
-            <amp-img animate-in="fade-in" animate-in-delay="0.6s" src="assets/dog.jpg" width="720" height="1280" layout="responsive">
-            </amp-img>
-            <amp-img animate-in="fade-in" animate-in-delay="0.8s" src="assets/bird.jpg" width="720" height="1280" layout="responsive">
-            </amp-img>
-            <amp-img animate-in="fade-in" animate-in-delay="1s" src="assets/rabbit.jpg" width="720" height="1280" layout="responsive">
-            </amp-img>
-          </div>
-        </amp-story-grid-layer>
-        <amp-story-grid-layer template="vertical" class="center-text">
-          <p class="banner-text" animate-in="whoosh-in-right">Pets can lower your stress levels!</p>
-        </amp-story-grid-layer>
-      </amp-story-page>
+      <amp-story-grid-layer template="vertical" class="noedge">
+        <div class="wrapper">
+          <amp-img animate-in="fade-in" animate-in-delay="0.4s" src="assets/cat.jpg" width="720" height="1280"
+            layout="responsive">
+          </amp-img>
+          <amp-img animate-in="fade-in" animate-in-delay="0.6s" src="assets/dog.jpg" width="720" height="1280"
+            layout="responsive">
+          </amp-img>
+          <amp-img animate-in="fade-in" animate-in-delay="0.8s" src="assets/bird.jpg" width="720" height="1280"
+            layout="responsive">
+          </amp-img>
+          <amp-img animate-in="fade-in" animate-in-delay="1s" src="assets/rabbit.jpg" width="720" height="1280"
+            layout="responsive">
+          </amp-img>
+        </div>
+      </amp-story-grid-layer>
+      <amp-story-grid-layer template="vertical" class="center-text">
+        <p class="banner-text" animate-in="whoosh-in-right">Pets can lower your stress levels!</p>
+      </amp-story-grid-layer>
+    </amp-story-page>
 
     <amp-story-page id="rabbits">
       <amp-story-grid-layer template="fill">
@@ -223,13 +255,17 @@
     <amp-story-page id="page5">
       <amp-story-grid-layer template="vertical" class="noedge">
         <div class="wrapper">
-          <amp-img animate-in="fade-in" animate-in-delay="0.4s" src="assets/cat.jpg" width="720" height="1280" layout="responsive">
+          <amp-img animate-in="fade-in" animate-in-delay="0.4s" src="assets/cat.jpg" width="720" height="1280"
+            layout="responsive">
           </amp-img>
-          <amp-img animate-in="fade-in" animate-in-delay="0.6s" src="assets/dog.jpg" width="720" height="1280" layout="responsive">
+          <amp-img animate-in="fade-in" animate-in-delay="0.6s" src="assets/dog.jpg" width="720" height="1280"
+            layout="responsive">
           </amp-img>
-          <amp-img animate-in="fade-in" animate-in-delay="0.8s" src="assets/bird.jpg" width="720" height="1280" layout="responsive">
+          <amp-img animate-in="fade-in" animate-in-delay="0.8s" src="assets/bird.jpg" width="720" height="1280"
+            layout="responsive">
           </amp-img>
-          <amp-img animate-in="fade-in" animate-in-delay="1s" src="assets/rabbit.jpg" width="720" height="1280" layout="responsive">
+          <amp-img animate-in="fade-in" animate-in-delay="1s" src="assets/rabbit.jpg" width="720" height="1280"
+            layout="responsive">
           </amp-img>
         </div>
       </amp-story-grid-layer>
